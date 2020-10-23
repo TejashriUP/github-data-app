@@ -16,7 +16,7 @@ class App1 extends Component {
       return (
         <tr key={user.id}>
           <td><h3>{user.id}</h3></td>
-          
+          <br/>
           <td><h3>{user.login}</h3></td>
           {/*<td>{user.avatar_url}</td>
           <td>{user.node_id}</td> */}
@@ -34,9 +34,9 @@ class App1 extends Component {
         <Table responsive>
           <thead>
             <tr>
-              <th ><h4>Id</h4></th>
-              <br/>
-              <th ><h4>Login Name</h4></th>
+              <th ><h3>Id----</h3></th>
+              
+              <th ><h3>Login Name</h3></th>
               
               {/* <th>Avtar link</th>
               <th>Node ID</th>*/}
