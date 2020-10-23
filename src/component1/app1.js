@@ -4,8 +4,9 @@ import { connect } from 'react-redux'
 import { showUsers } from '../actions'
 import { Table } from 'react-bootstrap'
 
-class App extends Component {
+class App1 extends Component {
   
+ 
   componentWillMount() {
     this.props.showUsers()
   }
@@ -14,9 +15,13 @@ class App extends Component {
     return this.props.users.map((user) => {
       return (
         <tr key={user.id}>
-          <td>{user.id}</td>
-          <td>{user.login}</td>
-          <td>{user.avatar_url}</td>
+          <td><h3>{user.id}</h3></td>
+          
+          <td><h3>{user.login}</h3></td>
+          {/*<td>{user.avatar_url}</td>
+          <td>{user.node_id}</td> */}
+
+          
         </tr>
       )
     })
@@ -25,13 +30,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>Users List</h2>
+        <button className= "btn btn-primary">Users List</button>
         <Table responsive>
           <thead>
             <tr>
-              <th>Id</th>
-              <th>Login Name</th>
-              <th>Avtar link</th>
+              <th ><h4>Id</h4></th>
+              <br/>
+              <th ><h4>Login Name</h4></th>
+              
+              {/* <th>Avtar link</th>
+              <th>Node ID</th>*/}
+
             </tr>
           </thead>
           <tbody>
@@ -49,4 +58,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { showUsers })(App)
+export default connect(mapStateToProps, { showUsers })(App1)

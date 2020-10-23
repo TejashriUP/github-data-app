@@ -14,12 +14,11 @@ const Dashboard = () => {
       </main>
     );
   }
-  
+ 
   return (
     <main>
       <Navbar>
       </Navbar>
-      <button className="btn btn-success" onClick="this.clickHandler()">click here for User List</button>
       <Search />
       <Info />
       <User />

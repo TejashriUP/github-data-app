@@ -5,6 +5,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { GithubProvider } from './context/context';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+
+import App1 from './component1/app1';
+import reducers from './reducers';
+import thunk from 'redux-thunk';
+
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +24,11 @@ ReactDOM.render(
       cacheLocation='localstorage'
     >
       <GithubProvider>
+      <Provider store={createStoreWithMiddleware(reducers)}>
+        
         <App />
+    <App1/>
+  </Provider>
       </GithubProvider>
     </Auth0Provider>
   </React.StrictMode>,
@@ -26,3 +39,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
