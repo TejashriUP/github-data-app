@@ -29,7 +29,7 @@ class App1 extends Component {
   
   render() {
     return (
-      <div>
+      <div className="text-center">
         <button className= "btn btn-primary">Users List</button>
         <Table responsive>
           <thead>

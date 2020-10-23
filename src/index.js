@@ -25,9 +25,9 @@ ReactDOM.render(
     >
       <GithubProvider>
       <Provider store={createStoreWithMiddleware(reducers)}>
-        
         <App />
-    <App1/>
+        <App1/>
+    
   </Provider>
       </GithubProvider>
     </Auth0Provider>

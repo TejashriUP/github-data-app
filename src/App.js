@@ -14,12 +14,13 @@ function App() {
           <Route path='/login'>
             <Login></Login>
           </Route>
-          <Route path='*'>
-            <Error></Error>
-          </Route>
           <Route path='/users'>
             <App1/>
           </Route>
+          <Route path='*'>
+            <Error></Error>
+          </Route>
+         
         </Switch>
       </Router>
     </AuthWrapper>
